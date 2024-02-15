@@ -40,9 +40,16 @@ h6 {
 	background-color: #4169e1 !important;
 	color: #ffffff !important;
 }
+.text-bg-pekat {
+	background-color: #196091 !important;
+	color: #ffffff !important;
+}
 .card {
 	&.text-bg-blue {
 		border-color: #4169e1 !important;
+	}
+	&.text-bg-pekat {
+		border-color: #196091 !important;
 	}
 }
 .text-blue {

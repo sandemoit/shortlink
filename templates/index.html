@@ -8,24 +8,22 @@ ShortLink: Shorten your URLs with us!
 
 <div class="container mt-5 mb-5">
     <div class="row mb-5 flex-wrap">
-        <h1 class="text-center">Shorten Your URL Here!</h1>
+        <h1 class="text-center">Free URL Shortener</h1>
         <div class="col-md-6 mx-auto">
-            <p class="text-center mb-4">Shorten your links, lengthen your reach with ShortLink</p>
             <form method="POST" action="{{ url_for('shorten') }}">
                 {{ form.hidden_tag() }}{{ form.csrf_token }}
-
-                <!-- <label for="long-url" class="form-label">Long URL</label>
-                    <input type="url" class="form-control" id="long-url" name="long-url" required /> -->
-                <div class="card mb-3 shadow-sm text-bg-blue">
-                    <div class="card-body">{{ form.url.label(class="mb-3") }} {{ form.url(class="form-control") }}</div>
+                <div class="card mb-3 shadow-sm text-bg-pekat">
+                    <div class="card-body mt-3">{{ form.url(class="form-control", placeholder="Enter the link here") }}</div>
                     <div class="text-center mb-3">
-                        <button type="submit" class="btn btn-light"><i class="bi bi-link-45deg me-2"></i>Shorten</button>
+                        <button type="submit" class="btn btn-light"><i class="bi bi-link-45deg me-2"></i>Shorten URL</button>
                     </div>
                 </div>
                 {% if error %}
                 <div class="alert alert-danger" role="alert">{{ error }}</div>
                 {% endif %}
             </form>
+            <p class="text-center mb-4">ShortURL is a free tool to shorten URLs and generate short links
+                URL shortener allows to create a shortened link making it easy to share</p>
         </div>
     </div>
     <div class="row features text-center">
